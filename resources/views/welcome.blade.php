@@ -1,45 +1,28 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('default')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title')
+  Accueil
+@endsection
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+@section('content')   
+ 
+    
+    <div class="container">
+        <div class="row">  
+           @foreach ($top10->tracks->track as $key => $m)    
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <p>
+                <a href="{{$m->url}}">
+                Titre : {{$m->name}}</a> <br>
+                Artiste : {{$m->artist->name}} <br>
+                Nombre d'écoutes : {{$m->listeners}}</p>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+                <img src='{{$m->image[2]->{"#text"} }}'>
+                <br>
             </div>
+        
+    @endforeach
         </div>
-    </body>
-</html>
+    </div> 
+  
+@endsection
