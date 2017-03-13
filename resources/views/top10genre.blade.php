@@ -16,7 +16,7 @@ Mazzika
                 <a href="{{$m->url}}">
                 Titre : {{$m->name}}</a> <br>
                 Artiste : {{$m->artist->name}} <br>
-                Nombre d'écoutes : {{$m->listeners}}</p>
+                
 
                 <img src='{{$m->image[2]->{"#text"} }}'>
                 <br>

@@ -1,7 +1,7 @@
 @extends('default')
 
 @section('title')
-  Accueil
+  Mazzika
 @endsection
 
 @section('content')   
@@ -204,9 +204,7 @@
 </form>  
           
 
-<form method="post" action="" class="col-lg-6">
-
-   <p>
+<form method="post" action="traitementtrack" class="col-lg-6">
 
        <label for="genre">Quel style musical vous intéresse ?</label><br />
 
@@ -216,7 +214,7 @@
 
            <option value="electronic">electronic</option>
 
-           <option value="seen_live">seen live</option>
+           <option value="seen+live">seen live</option>
 
            <option value="alternative">alternative</option>
 
@@ -224,13 +222,13 @@
 
            <option value="pop">pop</option>
 
-           <option value="female_vocalists">female vocalists</option>
+           <option value="female+vocalists">female vocalists</option>
 
            <option value="metal">metal</option>
            
-           <option value="alternative_rock">alternative rock</option> 
+           <option value="alternative+rock">alternative rock</option> 
            
-           <option value="classic_rock">classic rock</option>
+           <option value="classic+rock">classic rock</option>
            
            <option value="jazz">jazz</option>
            
@@ -240,11 +238,11 @@
            
            <option value="folk">folk</option>
            
-           <option value="indie_rock">indie rock</option>
+           <option value="indie+rock">indie rock</option>
            
           <option value="punk">punk</option>
 
-           <option value="hard_rock">hard rock</option>
+           <option value="hard+rock">hard rock</option>
 
            <option value="Hip-Hop">Hip-Hop</option>
 
@@ -252,21 +250,21 @@
 
            <option value="singer-songwriter">singer-songwriter</option>
 
-           <option value="black_metal">black metal</option>
+           <option value="black+metal">black metal</option>
 
            <option value="dance">dance</option>
 
            <option value="80s">80s</option>
            
-           <option value="Progressive_rock">Progressive rock</option> 
+           <option value="Progressive+rock">Progressive rock</option> 
            
-           <option value="death_metal">death metal</option>
+           <option value="death+metal">death metal</option>
            
            <option value="british">british</option>
            
           <option value="hardcore">hardcore</option>
           
-           <option value="heavy_metal">heavy metal</option> 
+           <option value="heavy+metal">heavy metal</option> 
            
            <option value="soul">soul</option>
            
@@ -282,11 +280,11 @@
 
            <option value="Soundtrack">Soundtrack</option>
 
-           <option value="punk_rock">punk rock</option>
+           <option value="punk+rock">punk rock</option>
 
            <option value="rap">rap</option>
 
-           <option value="thrash_metal">thrash metal</option>
+           <option value="thrash+metal">thrash metal</option>
            
            <option value="acoustic">acoustic</option> 
            
@@ -302,19 +300,20 @@
            
            <option value="german">german</option>
            
-           <option value="Progressive_metal">Progressive metal</option>
+           <option value="Progressive+metal">Progressive metal</option>
            
-          <option value="new_wave">new wave</option>
+          <option value="new+wave">new wave</option>
           
            <option value="funk">funk</option> 
            
            <option value="piano">piano</option>
            
-           <option value="hip_hop">hip hop</option>
+           <option value="hip+hop">hip hop</option>
            
        </select>
 
-   </p>
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">   
+    <label >&nbsp; </label> <button id="deconnexion1" name="envoyer" >ok</button>
 
 </form>          
 

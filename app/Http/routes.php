@@ -15,4 +15,9 @@ Route::get('/','top10@get');
 
 Route::post('traitement','top10@truck');
 
+Route::post('traitementtrack','topTrack@truck');
+
+
 Route::get('welcome/{id}',['as' => 'welcome', 'uses'=>'top10pays@get']);
+
+Route::get('top10genre/{style}',['as' => 'top10genre', 'uses'=>'topTrack@get']);
