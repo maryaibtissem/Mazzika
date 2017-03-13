@@ -6,7 +6,7 @@
 
 @section('content')   
    
-    <div class="container">
+    <div class="container k">
         <div class="row">  
     
            
@@ -320,13 +320,14 @@
           
            @foreach ($top10->tracks->track as $key => $m)    
             <div class=" centrer col-lg-4 col-md-6 col-sm-12">
-                <p>
+               <div  class="boite">
                 <a href="{{$m->url}}">
                 Titre : {{$m->name}}</a> <br>
                 Artiste : {{$m->artist->name}} <br>
-                Nombre d'écoutes : {{$m->listeners}}</p>
+                Nombre d'écoutes : {{$m->listeners}}
 
                 <img src='{{$m->image[2]->{"#text"} }}'>
+                </div>
                 <br>
             </div>
         
