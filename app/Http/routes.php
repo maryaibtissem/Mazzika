@@ -12,4 +12,7 @@
 */
 
 Route::get('/','top10@get');
-Route::post('welcome','top10@get');
+
+Route::post('traitement','top10@truck');
+
+Route::get('welcome/{id}',['as' => 'welcome', 'uses'=>'top10pays@get']);

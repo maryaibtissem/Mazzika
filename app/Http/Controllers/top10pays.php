@@ -1,34 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
-use Illuminate\Support\Facades\Input;
 
 
 
-class top10 extends Controller
+class top10pays extends Controller
 {
     public $key='fb1b5dd30404adf5fbfdc110d7e0391a';
-    public $pays = 'france';
-    
-    
-    
-    
-    public function truck(Request $request) {
+  
+  public function get($pays)
+    {
         
-         /* Article c'est le modele*/
-        $pays = $request->input('pays');//le truc posté  
-      
-     
-        return redirect()->route('welcome', ['id' => $pays]);
-    }
-    
-    
-    public function get()
-    {   
+        echo $pays; 
+        
         $curl = curl_init
-        ('http://ws.audioscrobbler.com/2.0/?limit=12&method=geo.gettoptracks&country='.$this->pays.'&api_key='.$this->key.'&format=json');
+        ('http://ws.audioscrobbler.com/2.0/?limit=12&method=geo.gettoptracks&country='.$pays.'&api_key='.$this->key.'&format=json');
 //      $curl = curl_init("http://ws.audioscrobbler.com/2.0/?limit=26&method=user.getrecenttracks&user=$user&api_key=".$this->key);
         
         curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
@@ -43,12 +33,8 @@ class top10 extends Controller
    	 
 //    dd($data);
 //   echo "<pre>";print_r($data);
-    return view ('welcome',array('top10'=> $data));
+        return view ('top10pays',array('top10'=> $data));
  
-    
     }
     
-
-     
 }
-
