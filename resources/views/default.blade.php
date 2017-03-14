@@ -7,12 +7,15 @@
    
     <!-- CSS + Font -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link href="{{asset('style.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
   
     <!-- Custom CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     @yield('custom_css')  
     <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    
+      <link href="{{asset('style.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
     
      <style type="text/css">
 
@@ -62,9 +65,10 @@
 </head>
 
 <body>
-  
+  <div id="entete"><p class="droite"><a href="#">Inscription</a> | <a href="#">Connexion</a></p></div>
     <header class="container">
         <div class="row">
+           
             <section class="col-lg-3 col-md-6 col-sm-12" id="bloc">
                
                 <div id="pochette" style="left:0;">
@@ -145,7 +149,7 @@
     </div> 
     
     <footer>
-   ...
+Mazzika | Tous droits réservés. 
     </footer>
 
   <!--  Scripts-->

@@ -27,7 +27,7 @@ class topTrack extends Controller
         
 //        echo $style;
         
-        $curl = curl_init('http://ws.audioscrobbler.com/2.0/?limit=12&method=tag.gettoptracks&tag='.$style.'&api_key='.$this->key.'&format=json');
+        $curl = curl_init('http://ws.audioscrobbler.com/2.0/?limit=48&method=tag.gettoptracks&tag='.$style.'&api_key='.$this->key.'&format=json');
         
         curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
         curl_setopt($curl,CURLOPT_HEADER,0);

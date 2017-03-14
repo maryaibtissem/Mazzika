@@ -18,7 +18,7 @@ class top10pays extends Controller
 /*        echo $pays; */
         
         $curl = curl_init
-        ('http://ws.audioscrobbler.com/2.0/?limit=12&method=geo.gettoptracks&country='.$pays.'&api_key='.$this->key.'&format=json');
+        ('http://ws.audioscrobbler.com/2.0/?limit=48&method=geo.gettoptracks&country='.$pays.'&api_key='.$this->key.'&format=json');
 //      $curl = curl_init("http://ws.audioscrobbler.com/2.0/?limit=26&method=user.getrecenttracks&user=$user&api_key=".$this->key);
         
         curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);

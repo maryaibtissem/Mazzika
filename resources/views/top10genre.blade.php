@@ -8,7 +8,7 @@ Mazzika
 @section('content')   
  
           <a href="{{asset('index.php')}}" class="bouton">Retour</a>
-            <h1>Top 12 de la semaine en {{$style}} :</h1>
+            <h1>Les meilleurs morceaux de musique {{$style}} :</h1>
           
            @foreach ($top10->tracks->track as $key => $m)    
             <div class=" centrer col-lg-4 col-md-6 col-sm-12">

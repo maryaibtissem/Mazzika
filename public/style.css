@@ -14,8 +14,14 @@ body
     background-size:cover;
     background-repeat: no-repeat;
     font-family: 'Ubuntu Condensed', sans-serif;
+ position: relative;
 
 }
+
+#entete{ background-color:black; color:white; width: 100%;}
+.droite{float: right; margin-right:5px; margin-bottom: 20px;}
+.droite a{ color: white; text-decoration: none;}
+.droite a:hover{ color: orangered; text-decoration: none;}
 
 header
 {
@@ -24,6 +30,12 @@ header
     margin-bottom: 32px;
         color:white;
     font-family: 'Diplomata SC', cursive;
+}
+
+footer {position: absolute; bottom: 0; left: 0; right: 0; background-color:black; color:white; width: 100%; text-align: center;}
+
+#pouce {
+    font-size:24px;  margin-left: 280px;
 }
 
 .boite

@@ -11,7 +11,7 @@
            
     <form class="col-lg-6" method="post" action="traitement">
     
-    <label for="genre">Top 12 des morceaux par pays :</label><br/>
+    <label for="genre">Top 50 des morceaux par pays :</label><br/>
     <select name="pays">
 	<option value="Afghanistan">Afghanistan</option>
     <option value="Albania">Albania</option>
@@ -202,7 +202,7 @@
 
 <form method="post" action="traitementtrack" class="col-lg-6">
 
-       <label for="genre">Top 12 des morceaux par genre :</label><br />
+       <label for="genre">Les meilleurs morceaux par genre :</label><br />
 
        <select name="genre" id="genre">
 
@@ -322,9 +322,11 @@
                 Artiste : {{$m->artist->name}}<br>
                 Nombre d'écoutes : {{$m->listeners}}<br><br>
 
-                <img src='{{$m->image[2]->{"#text"} }}'>
+                <img src='{{$m->image[2]->{"#text"} }}'><br><br>
+                <a href="#"><i class="fa fa-thumbs-up" id="pouce" aria-hidden="true"></i></a>
                 </div>
                 <br>
+               
             </div>
         
     @endforeach
