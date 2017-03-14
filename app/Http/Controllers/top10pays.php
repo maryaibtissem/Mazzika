@@ -15,7 +15,7 @@ class top10pays extends Controller
   public function get($pays)
     {
         
-        echo $pays; 
+/*        echo $pays; */
         
         $curl = curl_init
         ('http://ws.audioscrobbler.com/2.0/?limit=12&method=geo.gettoptracks&country='.$pays.'&api_key='.$this->key.'&format=json');
@@ -27,13 +27,13 @@ class top10pays extends Controller
         $data = curl_exec($curl); 
         curl_close($curl);
         
-//       $data = str_replace("#text", "text",$data);
+       $pays = str_replace("+", " ",$pays);
         
         $data= json_decode($data);
    	 
 //    dd($data);
 //   echo "<pre>";print_r($data);
-        return view ('top10pays',array('top10'=> $data));
+        return view ('top10pays',array('top10'=> $data,'pays'=>$pays));
  
     }
     

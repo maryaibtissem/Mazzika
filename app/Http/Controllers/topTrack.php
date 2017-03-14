@@ -25,7 +25,7 @@ class topTrack extends Controller
     public function get ($style)
     {
         
-        echo $style;
+//        echo $style;
         
         $curl = curl_init('http://ws.audioscrobbler.com/2.0/?limit=12&method=tag.gettoptracks&tag='.$style.'&api_key='.$this->key.'&format=json');
         
@@ -39,7 +39,7 @@ class topTrack extends Controller
         $data= json_decode($data);
         // echo "<pre>";print_r($data);
 
-        return view ('top10genre',array('top10'=> $data));			
+        return view ('top10genre',array('top10'=> $data,'style'=>$style));			
     }
     
     

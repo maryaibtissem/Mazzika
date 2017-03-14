@@ -6,8 +6,7 @@
 
 @section('content')   
    
-    <div class="container k">
-        <div class="row">  
+
     
            
     <form class="col-lg-6" method="post" action="traitement">
@@ -58,7 +57,6 @@
     <option value="Djibouti">Djibouti</option>
     <option value="Dominica">Dominica</option>
     <option value="Dominican+Republic">Dominican Republic</option>
-    <option value="Ecuador">Ecuador</option>
     <option value="Egypt">Egypt</option>
     <option value="El+Salvador">El Salvador</option>
     <option value="Equatorial+Guinea">Equatorial Guinea</option>
@@ -316,15 +314,15 @@
     <label >&nbsp; </label> <button id="deconnexion1" name="envoyer" >ok</button>
 
 </form>          
-
+<h1>Top 12 de la semaine en France :</h1>
           
            @foreach ($top10->tracks->track as $key => $m)    
             <div class=" centrer col-lg-4 col-md-6 col-sm-12">
                <div  class="boite">
                 <a href="{{$m->url}}">
                 Titre : {{$m->name}}</a> <br>
-                Artiste : {{$m->artist->name}} <br>
-                Nombre d'écoutes : {{$m->listeners}}
+                Artiste : {{$m->artist->name}}<br>
+                Nombre d'écoutes : {{$m->listeners}}<br><br>
 
                 <img src='{{$m->image[2]->{"#text"} }}'>
                 </div>
@@ -332,7 +330,6 @@
             </div>
         
     @endforeach
-        </div>
-    </div> 
+
   
 @endsection

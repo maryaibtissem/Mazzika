@@ -1,21 +1,61 @@
 .centrer
 {
-    text-align: center;
     padding: 20px;
 }
+.centrer img
+{
+    display: block;
+    margin: auto;
+}
 
-body{ 
+body
+{ 
     background-image: url(img/2715.jpg);
     background-size: cover; 
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
-.boite{
+header
+{
+    height:192px;
+    top:0;
+    margin-bottom: 32px;
+}
+
+.boite
+{
     background: rgba( 255, 255, 255, 0.7);
 /*    border : 2px solid black;*/
     border-radius:10px;
-        padding:10px;
+    padding:10px;
     padding-top: 20px;
     padding-bottom: 20px;
-box-shadow: 10px 10px 5px 0px #cbcefb;
-border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px #cbcefb;
+    border-radius: 10px;
 }
+
+form
+{
+    margin-bottom:24px;
+}
+
+h1
+{
+    margin: 24px;
+}
+
+.bouton
+{
+    background: #cdffff;
+    padding:15px;
+    border-radius:12px;
+    box-shadow: 2px 2px 1px 0px #cbcefb;
+    margin:20px;
+    text-decoration: none;
+}
+
+.bouton:hover
+{
+    background: white; color:hotpink;text-decoration: none;
+}
+
