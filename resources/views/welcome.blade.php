@@ -11,7 +11,7 @@
            
     <form class="col-lg-6" method="post" action="traitement">
     
-    <label for="genre">choix par pays</label><br/>
+    <label for="genre">Top 12 des morceaux par pays :</label><br/>
     <select name="pays">
 	<option value="Afghanistan">Afghanistan</option>
     <option value="Albania">Albania</option>
@@ -41,13 +41,11 @@
     <option value="Cambodia">Cambodia</option>
     <option value="Cameroon">Cameroon</option>
     <option value="Canada">Canada</option>
-    <option value="Cape+Verde">Cape Verde</option>
     <option value="Cayman+Islands">Cayman Islands</option>
     <option value="Chad">Chad</option>
     <option value="Chile">Chile</option>
     <option value="China">China</option>
     <option value="Colombia">Colombia</option>
-    <option value="Congo">Congo</option>
     <option value="Costa+Rica">Costa Rica</option>
     <option value="Croatia">Croatia</option>
     <option value="Cuba">Cuba</option>
@@ -204,7 +202,7 @@
 
 <form method="post" action="traitementtrack" class="col-lg-6">
 
-       <label for="genre">Quel style musical vous intéresse ?</label><br />
+       <label for="genre">Top 12 des morceaux par genre :</label><br />
 
        <select name="genre" id="genre">
 

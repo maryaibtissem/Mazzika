@@ -10,9 +10,11 @@
 
 body
 { 
-    background-image: url(img/2715.jpg);
-    background-size: cover; 
+    background-image: url(img/background-ibtissem.png);
+    background-size:cover;
     background-repeat: no-repeat;
+    font-family: 'Ubuntu Condensed', sans-serif;
+
 }
 
 header
@@ -20,19 +22,26 @@ header
     height:192px;
     top:0;
     margin-bottom: 32px;
+        color:white;
+    font-family: 'Diplomata SC', cursive;
 }
 
 .boite
 {
-    background: rgba( 255, 255, 255, 0.7);
+    background: rgba( 255,165,0, 0.5);
 /*    border : 2px solid black;*/
     border-radius:10px;
     padding:10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    box-shadow: 10px 10px 5px 0px #cbcefb;
+/*    box-shadow: 3px 3px 2px 0px #cfcfcf;*/
     border-radius: 10px;
+    color: white;
+ 
 }
+
+.boite a{    text-decoration: none;  color: white;}
+.boite a:hover{    text-decoration: none;  color: orangered;}
 
 form
 {
@@ -46,12 +55,13 @@ h1
 
 .bouton
 {
-    background: #cdffff;
+    background:rgba( 255,189,0, 0.5);
     padding:15px;
     border-radius:12px;
     box-shadow: 2px 2px 1px 0px #cbcefb;
     margin:20px;
     text-decoration: none;
+    color:white;
 }
 
 .bouton:hover
@@ -59,3 +69,11 @@ h1
     background: white; color:hotpink;text-decoration: none;
 }
 
+#boiteSlogan{top: 40px;}
+#slogan{font-size:28px; text-shadow: 5px 5px 5px grey; color: white;} 
+
+#john{
+    margin-left: 192px;
+}
+
+p, h1, label {    color:white;}

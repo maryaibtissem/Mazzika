@@ -38,6 +38,7 @@ class topTrack extends Controller
         
         $data= json_decode($data);
         // echo "<pre>";print_r($data);
+        $style = str_replace("+", " ",$style);
 
         return view ('top10genre',array('top10'=> $data,'style'=>$style));			
     }

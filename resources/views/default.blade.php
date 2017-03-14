@@ -11,6 +11,9 @@
   
     <!-- Custom CSS -->
     @yield('custom_css')  
+    <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    
      <style type="text/css">
 
         #bloc{
@@ -61,16 +64,25 @@
 <body>
   
     <header class="container">
-<section id="bloc">
-    <div id="pochette" style="left:0;">
-        <img src="{{asset('img/logopart1.png')}}" alt="">
-    </div>
-    <div id="disque" style="left:0px;">
-    <img src="{{asset('img/logopart2.png')}}" alt="">
-    </div>
-</section>
+        <div class="row">
+            <section class="col-lg-3 col-md-6 col-sm-12" id="bloc">
+               
+                <div id="pochette" style="left:0;">
+                    <img src="{{asset('img/logopart1.png')}}" alt="">
+                </div>
+                
+                <div id="disque" style="left:0px;">
+                    <img src="{{asset('img/logopart2.png')}}" alt="">
+                </div>
+            </section>
+            
+            <section class="col-lg-9 col-md-6 hidden-sm hidden-xs" id="boiteSlogan">
+                <p id="slogan"> « Everything we do is music.  »</p>
+                <p id="john">John Cage</p>
+            </section>
+    </div> 
 
-     <script type="text/javascript">
+    <script type="text/javascript">
 
         var disque = document.getElementById("disque");
         var pochette = document.getElementById("pochette");
@@ -80,54 +92,61 @@
 
         pochette.onmouseover=function()
         {
-          if(bool===true && antibug === true)
-          {
-            var move = setInterval(sortiedisque,50);
+            if(bool===true && antibug === true)
+            {
+                var move = setInterval(sortiedisque,50);
                 antibug = false;
-            function sortiedisque()
-            {
-              positionGauche += 5;
-              disque.style.left =  positionGauche +'px';
-              bool=false;
-
-              if(positionGauche===110)
+                
+                function sortiedisque()
                 {
-                  clearInterval(move);
-                  antibug = true;
+                    positionGauche += 5;
+                    disque.style.left =  positionGauche +'px';
+                    bool=false;
+
+                    if(positionGauche===110)
+                    {
+                        clearInterval(move);
+                        antibug = true;
+                    }
                 }
             }
-          }
-          else if(bool===false && antibug === true)
-          {
-            var move2 = setInterval(rentrerdisque,50);
-            antibug = false;
-            function rentrerdisque()
-            {
-              positionGauche -= 5;
-              disque.style.left =  positionGauche +'px';
-              bool=true;
-
-              if(positionGauche===0)
+        }
+            
+        pochette.onmouseout=function()
+        {
+            if(bool===false && antibug === true)
                 {
-                  clearInterval(move2);
-                  antibug = true;
-                }
-            }
-          }
+                    var move2 = setInterval(rentrerdisque,50);
+                    antibug = false;
+                    
+                    function rentrerdisque()
+                    {
+                        positionGauche -= 5;
+                        disque.style.left =  positionGauche +'px';
+                        bool=true;
+
+                        if(positionGauche===0)
+                            {
+                                clearInterval(move2);
+                                antibug = true;
+                            }
+                    }
+                    }
         }
     </script>
 
-  </header>
+    </header>
 
 
-      <div class="container k">
+    <div class="container k">
         <div class="row">  
-   @yield('content')
+           @yield('content')
         </div>
     </div> 
-  <footer>
+    
+    <footer>
    ...
-  </footer>
+    </footer>
 
   <!--  Scripts-->
   <script src="{{asset('js/jquery.js')}}"></script>
