@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
-
+use App\Pays;
+use App\Genre;
 
 
 class top10 extends Controller
@@ -37,13 +38,21 @@ class top10 extends Controller
         $data = curl_exec($curl); 
         curl_close($curl);
         
-//       $data = str_replace("#text", "text",$data);
+//      $data = str_replace("#text", "text",$data);
         
         $data= json_decode($data);
    	 
 //    dd($data);
 //   echo "<pre>";print_r($data);
-    return view ('welcome',array('top10'=> $data));
+        
+        
+        $Pays = new Pays;
+        $payss = $Pays::all();
+        $Genre = new Genre;
+        $genres = $Genre::all();
+      
+        
+        return view ('welcome',array('top10'=> $data,'Pays'=>$payss, 'Genre'=>$genres));
  
     
     }

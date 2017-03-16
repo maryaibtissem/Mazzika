@@ -1,91 +1,140 @@
-.centrer
-{
+.centrer {
     padding: 20px;
 }
-.centrer img
-{
+
+.centrer img {
     display: block;
     margin: auto;
 }
 
-body
-{ 
+body {
     background-image: url(img/background-ibtissem.png);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Ubuntu Condensed', sans-serif;
- position: relative;
-
+    position: relative;
+    height: 100%;
 }
 
-#entete{ background-color:black; color:white; width: 100%;}
-.droite{float: right; margin-right:5px; margin-bottom: 20px;}
-.droite a{ color: white; text-decoration: none;}
-.droite a:hover{ color: orangered; text-decoration: none;}
+#entete {
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: fixed;
+    height: 24px;
+    font-size: 18px;
+}
 
-header
-{
-    height:192px;
-    top:0;
+.droite {
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+.droite a {
+    color: white;
+    text-decoration: none;
+}
+
+.droite a:hover {
+    color: orangered;
+    text-decoration: none;
+}
+
+header {
+    height: 192px;
+    top: 0;
     margin-bottom: 32px;
-        color:white;
+    color: white;
     font-family: 'Diplomata SC', cursive;
 }
 
-footer {position: absolute; bottom: 0; left: 0; right: 0; background-color:black; color:white; width: 100%; text-align: center;}
+.erreur{color: red;}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
 
 #pouce {
-    font-size:24px;  margin-left: 280px;
+    font-size: 24px;
+    margin-left: 280px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 30px;
 }
 
-.boite
-{
-    background: rgba( 255,165,0, 0.5);
-/*    border : 2px solid black;*/
-    border-radius:10px;
-    padding:10px;
+.boite {
+    background: rgba( 252, 141, 27, 0.7);
+    /*    border : 2px solid black;*/
+    border-radius: 10px;
+    padding: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-/*    box-shadow: 3px 3px 2px 0px #cfcfcf;*/
+    /*    box-shadow: 3px 3px 2px 0px #cfcfcf;*/
     border-radius: 10px;
     color: white;
- 
 }
 
-.boite a{    text-decoration: none;  color: white;}
-.boite a:hover{    text-decoration: none;  color: orangered;}
-
-form
-{
-    margin-bottom:24px;
+.boite a {
+    text-decoration: none;
+    color: white;
 }
 
-h1
-{
+.boite a:hover {
+    text-decoration: none;
+    color: orangered;
+}
+
+form {
+    margin-bottom: 24px;
+}
+
+h1 {
     margin: 24px;
 }
 
-.bouton
+#inscription label
 {
-    background:rgba( 255,189,0, 0.5);
-    padding:15px;
-    border-radius:12px;
+    width: 100px;
+}
+
+.bouton {
+    background: rgba( 255, 189, 0, 0.5);
+    padding: 15px;
+    border-radius: 12px;
     box-shadow: 2px 2px 1px 0px #cbcefb;
-    margin:20px;
+    margin: 20px;
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
-.bouton:hover
-{
-    background: white; color:hotpink;text-decoration: none;
+.bouton:hover {
+    background: white;
+    color: hotpink;
+    text-decoration: none;
 }
 
-#boiteSlogan{top: 40px;}
-#slogan{font-size:28px; text-shadow: 5px 5px 5px grey; color: white;} 
+#boiteSlogan {
+    top: 40px;
+}
 
-#john{
+#slogan {
+    font-size: 28px;
+    text-shadow: 5px 5px 5px grey;
+    color: white;
+}
+
+#john {
     margin-left: 192px;
 }
 
-p, h1, label {    color:white;}
+p,h1,label {
+    color: white;
+}

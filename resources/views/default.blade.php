@@ -65,7 +65,7 @@
 </head>
 
 <body>
-  <div id="entete"><p class="droite"><a href="#">Inscription</a> | <a href="#">Connexion</a></p></div>
+  <div id="entete"><p class="droite"><a href="inscription">Inscription</a> | <a href="#">Connexion</a></p></div>
     <header class="container">
         <div class="row">
            
