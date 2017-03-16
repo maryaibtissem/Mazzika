@@ -80,6 +80,7 @@ footer {
     /*    box-shadow: 3px 3px 2px 0px #cfcfcf;*/
     border-radius: 10px;
     color: white;
+    min-height: 320px;
 }
 
 .boite a {

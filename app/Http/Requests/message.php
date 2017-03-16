@@ -27,16 +27,17 @@ class message extends Request
         return [
             'pseudo'=>'required',
             'mdp'=> 'required',
-            'email'=>'required|unique:membres'
+            'email'=>'required|unique:membres',
+            'email'=>'required|email'
         ];
     }
     public function messages()
     {
         return [
-        'email.required' => 'We need to know your e-mail address!',
-         'email.unique:membres'  => 'unique',  
-            'pseudo'=>'required',
-            'mdp'=> 'required'
+        'email.required' => 'Oops il manque l\'email...',
+        'email.unique:membres'  => 'Cet e-mail existe déjà.',  
+        'pseudo.required'=>'Oops il manque le pseudo.',
+        'mdp.required'=> 'Oops il manque le mot de passe..'
         
         ];
     }

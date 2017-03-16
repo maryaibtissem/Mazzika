@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/','top10@get');
+Route::get('/',['as' => 'accueil','uses'=>'top10@get' ]
+          );
 
 Route::post('traitement','top10@truck');
+
 
 Route::post('traitementtrack','topTrack@truck');
 Route::post('traitementinfos','inscription@getinfos');
@@ -27,3 +29,7 @@ Route::get('inscription',function()
            {
     return view ('inscription');
 });
+
+
+
+

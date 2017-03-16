@@ -40,7 +40,8 @@
 
 </form>
 
-<h1>Top 12 de la semaine en France :</h1> @foreach ($top10->tracks->track as $key => $m)
+<h1>Top 12 de la semaine en France :</h1> 
+@foreach ($top10->tracks->track as $key => $m)
 
 <div class=" centrer col-lg-4 col-md-6 col-sm-12">
     <div class="boite">

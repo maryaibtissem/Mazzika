@@ -34,7 +34,7 @@ class top10 extends Controller
         
         curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
         curl_setopt($curl,CURLOPT_HEADER,0);
-        curl_setopt($curl,CURLOPT_TIMEOUT,3);
+        curl_setopt($curl,CURLOPT_TIMEOUT,8);
         $data = curl_exec($curl); 
         curl_close($curl);
         
