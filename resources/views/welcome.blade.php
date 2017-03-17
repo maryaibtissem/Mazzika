@@ -1,7 +1,7 @@
-@extends('default') @section('title') Mazzika @endsection @section('content')
+ @section('title') Mazzika @endsection @section('content')
 
-
-
+<div class="container k">
+    <div class="row">  
 
 <form class="col-lg-6" method="post" action="traitement">
 
@@ -60,5 +60,12 @@
     <br>
 
 </div>
-
+  
 @endforeach @endsection
+  </div>
+</div>
+
+
+
+
+ @extends('layouts.app')

@@ -1,4 +1,4 @@
-@extends('default')
+ @extends('layouts.app')
 
 @section('title')
 Mazzika
@@ -6,8 +6,10 @@ Mazzika
 @endsection
 
 @section('content')   
+<div class="container k">
+        <div class="row">  
  
-            <a href="{{asset('index.php')}}" class="bouton">Retour</a><br>
+            
             <h1> {{$pays}} - Top 50 de la semaine :</h1>
           
            @foreach ($top10->tracks->track as $key => $m)    

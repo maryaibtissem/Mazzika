@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use Illuminate\Support\Facades\Input;
+use App\Genre;
 
 class topTrack extends Controller
 {
@@ -38,9 +39,17 @@ class topTrack extends Controller
         
         $data= json_decode($data);
         // echo "<pre>";print_r($data);
-        $style = str_replace("+", " ",$style);
+//        $style = str_replace("+", " ",$style);
+        
+            $genres = new Genre;
+            $genre = $genres::select('nom')
+            ->where('value', '=', $style)
+            ->get();
+        
+            $nom = $genre[0]->nom;
+//             echo "<pre>";print_r($genre);   
 
-        return view ('top10genre',array('top10'=> $data,'style'=>$style));			
+        return view ('top10genre',array('top10'=> $data,'style'=>$genre));			
     }
     
     

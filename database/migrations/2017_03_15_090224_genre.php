@@ -12,7 +12,7 @@ class Genre extends Migration
      */
     public function up()
     {
-        Schema::create('genre', function (Blueprint $table) {
+        Schema::create('genres', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom')->unique();
         });
@@ -25,6 +25,6 @@ class Genre extends Migration
      */
     public function down()
     {
-        Schema::drop('genre');
+        Schema::drop('genres');
     }
 }

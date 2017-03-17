@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   
     <!-- Custom CSS -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     @yield('custom_css')  
     <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
@@ -65,7 +65,8 @@
 </head>
 
 <body>
-  <div id="entete"><p class="droite"><a href="inscription">Inscription</a> | <a href="#">Connexion</a></p></div>
+
+  <div id="entete"><p class="droite"><a href="register">Inscription</a> | <a href="login">Connexion</a></p></div>
     <header class="container">
         <div class="row">
            

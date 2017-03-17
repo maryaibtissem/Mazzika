@@ -14,11 +14,16 @@
 Route::get('/',['as' => 'accueil','uses'=>'top10@get' ]
           );
 
+
 Route::post('traitement','top10@truck');
 
 
 Route::post('traitementtrack','topTrack@truck');
 Route::post('traitementinfos','inscription@getinfos');
+
+Route::post('traitementconnexion','connexion@getinfos');
+
+
 
 
 Route::get('welcome/{id}',['as' => 'welcome', 'uses'=>'top10pays@get']);
@@ -30,6 +35,15 @@ Route::get('inscription',function()
     return view ('inscription');
 });
 
+Route::get('connexion',function()
+           {
+    return view ('connexion');
+});
 
 
 
+
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
