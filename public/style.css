@@ -1,3 +1,32 @@
+#description {
+    position: absolute;
+    top: 50%;
+    width: 70%;
+    font-family: 'Diplomata regular SC', cursive;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 16px;
+    font-size: 20px;
+}
+
+#description h1 {
+    text-align: center;
+}
+
+#description1 {
+    position: absolute;
+    top: 50%;
+    width: 70%;
+    font-family: 'Diplomata regular SC', cursive;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    padding: 16px;
+    font-size: 20px;
+}
+
 .centrer {
     padding: 20px;
 }
@@ -8,48 +37,105 @@
 }
 
 body {
-    background-image: url(img/background-ibtissem.png);
     background-size: cover;
+    background-color: black;
     background-repeat: no-repeat;
     font-family: 'Ubuntu Condensed', sans-serif;
     position: relative;
     height: 100%;
 }
 
-#entete {
-    background-color: black;
-    color: white;
+.k {}
+
+.noteMusique {
+    margin-left: 49%;
+}
+
+.alexandre {
+    background-image: url('img/audience-868074_1920.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
     width: 100%;
-    position: fixed;
-    height: 24px;
-    font-size: 18px;
+    position: absolute;
+    padding: 32px;
 }
 
-.droite {
-    float: right;
-    margin-right: 5px;
-    margin-bottom: 20px;
-}
 
-.droite a {
+/*
+.panel-body{
+    background: rgba(0,0,0,0);
+}
+*/
+
+.checkbox label {
     color: white;
-    text-decoration: none;
 }
 
-.droite a:hover {
-    color: orangered;
-    text-decoration: none;
+
+/*
+.entete {
+
+    position: relative;
+     
+
+}
+*/
+
+
+#partie1 {
+    position: absolute;
+    left: 0;
 }
 
 header {
-    height: 192px;
-    top: 0;
-    margin-bottom: 32px;
-    color: white;
-    font-family: 'Diplomata SC', cursive;
+    /*    position: fixed;*/
 }
 
-.erreur{color: red;}
+.boiteCompte {
+    /*    background: rgba( 252, 141, 27, 0.7);*/
+    /*    border : 2px solid black;*/
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*    box-shadow: 3px 3px 2px 0px #cfcfcf;*/
+    border-radius: 10px;
+    color: white;
+    min-height: 320px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    height: 320px;
+
+}
+
+.boiteCompte a {
+    text-decoration: none;
+    color: white;
+}
+
+.boiteCompte a:hover {
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+
+.boite img {
+    opacity: 0.7;
+}
+
+.boite img:hover {
+    opacity: 1;
+    width: 65%;
+}
+
+.boiteCompte img {
+        opacity: 1;
+    width: 65%;
+}
+
+.erreur {
+    color: red;
+}
 
 footer {
     position: fixed;
@@ -63,15 +149,23 @@ footer {
 }
 
 #pouce {
+    cursor: pointer;
     font-size: 24px;
     margin-left: 280px;
     border: 2px solid white;
     padding: 10px;
     border-radius: 30px;
+    color: white;
+}
+
+#pouce:hover {
+    color: goldenrod;
+    border: 2px solid goldenrod;
+;
 }
 
 .boite {
-    background: rgba( 252, 141, 27, 0.7);
+    /*    background: rgba( 252, 141, 27, 0.7);*/
     /*    border : 2px solid black;*/
     border-radius: 10px;
     padding: 10px;
@@ -81,6 +175,9 @@ footer {
     border-radius: 10px;
     color: white;
     min-height: 320px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    height: 320px;
 }
 
 .boite a {
@@ -90,7 +187,7 @@ footer {
 
 .boite a:hover {
     text-decoration: none;
-    color: orangered;
+    color: darkgoldenrod;
 }
 
 form {
@@ -101,13 +198,11 @@ h1 {
     margin: 24px;
 }
 
-#inscription label
-{
+#inscription label {
     width: 100px;
 }
 
-#connexion label
-{
+#connexion label {
     width: 100px;
 }
 
@@ -141,31 +236,88 @@ h1 {
     margin-left: 192px;
 }
 
-p,h1,label {
+p,
+h1,
+label {
     color: white;
 }
 
-
-.navbar{
-    background-color: black;
-    color:white;
-
+nav {
+    position: fixed;
 }
 
-.checkbox label {color:black;}
+.navbar {
+    background-color: black;
+    color: white;
+}
 
+.color-btn {
+    background-color: darkgoldenrod;
+    color: white;
+}
 
-.navbar-default .navbar-nav > li > a:link  {
-    color:white;
-}.navbar-default .navbar-nav > li > a:visited  {
-    color:white;
+.color-btn:hover {
+    background-color: white;
+    color: darkgoldenrod;
+}
+
+.btn-link {
+    color: darkgoldenrod;
+}
+
+.btn-link:hover {
+    color: goldenrod;
+}
+
+.navbar-default .navbar-nav > li > a:link {
+    color: white;
+    font-family: 'Diplomata regular SC', cursive;
+}
+
+.navbar-default .navbar-nav > li > a:visited {
+    color: white;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color:orangered;
-}.navbar-default .navbar-nav > li > a:active {
-    color:orangered;
+    color: goldenrod;
 }
 
+.navbar-default .navbar-nav > li > a:active {
+    color: goldenrod;
+}
 
+.panel-default {
+    background: rgba(0, 0, 0, 0.5);
+    font-family: 'Diplomata regular SC', cursive;
+}
 
+.panel-default > .panel-heading {
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.presentation {
+    height: 800px;
+    top: 0;
+    margin-bottom: 64px;
+    color: white;
+    font-family: 'Diplomata SC', cursive;
+    min-height: 600px;
+    position: relative;
+    /*    background-image: url(img/background-ibtissem2.png);*/
+}
+
+#app-navbar-collapse {
+    /*position: absolute;    */
+}
+
+#fond {
+    position: fixed;
+    height: 800px;
+    width: 100%;
+    /*        z-index: 1;*/
+}
+
+.presentation img {
+    position: absolute;
+}

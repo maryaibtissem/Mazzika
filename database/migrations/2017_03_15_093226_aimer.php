@@ -12,7 +12,7 @@ class Aimer extends Migration
      */
     public function up()
     {
-         Schema::create('morceaux', function (Blueprint $table) {
+         Schema::create('aimer', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_morceau');
             $table->integer('id_membre');

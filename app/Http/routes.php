@@ -16,6 +16,7 @@ Route::get('/',['as' => 'accueil','uses'=>'top10@get' ]
 
 
 Route::post('traitement','top10@truck');
+Route::post('pouce','connexion@like');
 
 
 Route::post('traitementtrack','topTrack@truck');
@@ -30,20 +31,16 @@ Route::get('welcome/{id}',['as' => 'welcome', 'uses'=>'top10pays@get']);
 
 Route::get('top10genre/{style}',['as' => 'top10genre', 'uses'=>'topTrack@get']);
 
-Route::get('inscription',function()
-           {
-    return view ('inscription');
-});
-
-Route::get('connexion',function()
-           {
-    return view ('connexion');
-});
-
-
 
 
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::post('compte','connexion@affichage');
+
+Route::get('compte',['as' => 'compte','uses'=>'connexion@affichage' ]
+          );
+
+
+
+Route::post('/home', 'HomeController@index');

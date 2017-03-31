@@ -46,7 +46,7 @@ class topTrack extends Controller
             ->where('value', '=', $style)
             ->get();
         
-            $nom = $genre[0]->nom;
+//            $nom = $genre[0]->nom;
 //             echo "<pre>";print_r($genre);   
 
         return view ('top10genre',array('top10'=> $data,'style'=>$genre));			
